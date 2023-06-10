@@ -1,36 +1,32 @@
-
-import {Fragment} from "react";
-import {BrowserRouter,Route,Routes} from "react-router-dom";
+import { Fragment } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Recuperarsenha from "../RecuperarSenha";
 import Home from "../Paginas/Home";
 import Login from "../Paginas/Login";
 import Cadastro from "../Paginas/Cadastro";
 import useAuth from "../Hook/useAuth";
-import CadastroPf from "../Paginas/CadastroPf";
+import CadastroPf from "../Paginas/CadastroPf/index";
 
-const Private =({Item}) =>{
-    const {cadastrado} = useAuth()
+const Private = ({ Item }) => {
+  const { cadastrado } = useAuth();
 
-    return cadastrado > 0 ? <Item/> : <Login/>
-}
+  return cadastrado > 0 ? <Item /> : <Login />;
+};
 
-const RotasApp = () =>{
-    return(
-
-        <BrowserRouter>
-            <Fragment>
-                <Routes>
-                    <Route exact path="/Home" element={<Private Item={Home}/>}/>
-                    <Route path="/" element={<Login/>}/>
-                    <Route exact path="/Cadastro" element={<Cadastro/>}/>
-                    <Route path="*" element={Login}/>
-                    <Route path="/Recuperarsenha" element={<Recuperarsenha/>}/>
-                    <Route exact path="/CadastroPf" element={<CadastroPf/>}/>
-                </Routes>
-            </Fragment>
-        </BrowserRouter>
-    );
-
-}
+const RotasApp = () => {
+  return (
+    <BrowserRouter>
+      <Fragment>
+        <Routes>
+          <Route path="/Home" element={<Private Item={Home} />} />
+          <Route path="/Cadastro" element={<Cadastro />} />
+          <Route path="/Recuperarsenha" element={<Recuperarsenha />} />
+          <Route path="/CadastroPf" element={<CadastroPf />} />
+          <Route path="/" element={<Login />} />
+        </Routes>
+      </Fragment>
+    </BrowserRouter>
+  );
+};
 
 export default RotasApp;

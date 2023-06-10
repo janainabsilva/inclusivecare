@@ -26,14 +26,31 @@ import img from "../../Assets/fundobox.jpg";
 const Login = () => {
 
   const {login} = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-
-
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+
+    const handleLogin = async () => {
+      if (!email | !password) {
+        setError("Preencha todos os campos");
+        return;
+      }
+    
+      const res =  login(email, password);
+    
+      if (res ) {
+        setError(res);
+        return;
+      }
+    
+      navigate("/Home");
+    
+  };
+
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -41,21 +58,7 @@ const Login = () => {
     event.preventDefault();
   };
 
-  const handleLogin = () => {
-    if (!email || !password) {
-      setError("Preencha todos os campos");
-      return;
-    }
-  
-    const res = login(email, password);
-  
-    if (res) {
-      setError(res);
-      return;
-    }
-  
-    navigate("/Home");
-  };
+ 
 
   return (
     

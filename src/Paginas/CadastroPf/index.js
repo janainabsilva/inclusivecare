@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import logo from "../../Assets/logo.png";
@@ -10,11 +9,32 @@ import IconButton from "@mui/material/IconButton";
 import Visibility from "@mui/icons-material/Visibility";
 import img from "../../Assets/fundobox.jpg";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"></link>
+import useAuth from "../../Hook/useAuth";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"
+  rel="stylesheet"
+></link>;
 
 const CadastroPf = () => {
+  const { cadastro } = useAuth(""); // <-- corrigido para cadastro
+  const navigate = useNavigate("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    if (!email || !senha) {
+      setError("preencha todos os campos");
+      return;
+    }
+  };
+
+ 
 
   const handleClickShowPassword = () => {
     setShowPassword((show) => !show);
@@ -46,8 +66,12 @@ const CadastroPf = () => {
         <img
           src={logo}
           alt=""
-         
-          style={{ width: "140px", height: "80px", marginBottom: "1px",paddingTop:"10px" }}
+          style={{
+            width: "140px",
+            height: "80px",
+            marginBottom: "1px",
+            paddingTop: "10px",
+          }}
         ></img>
         <Typography
           variant="h1"
@@ -56,9 +80,8 @@ const CadastroPf = () => {
           fontFamily={"'Oswald', sans-serif"}
           textAlign="center"
           color={"white"}
-          
         >
-          Bem-vindo(a)! <br/>
+          Bem-vindo(a)! <br />
           Crie sua conta no Inclusive Care
         </Typography>
         <Typography
@@ -70,9 +93,7 @@ const CadastroPf = () => {
           color={"white"}
           padding={1}
         >
-          Você está procurando serviços  inclusivos para   autismo.Preencha os campos    abaixo e encontre-os conosco
-         
-          durante o seu registro
+          Você está procurando serviços inclusivos para autismo. Preencha os campos abaixo e encontre-os conosco durante o seu registro.
         </Typography>
         <TextField
           id="filled-basic"
@@ -80,6 +101,8 @@ const CadastroPf = () => {
           variant="filled"
           margin="normal"
           type="email"
+          value={email}
+          onChange={(e) => [setEmail(e.target.value), setError("")]}
           InputProps={{
             style: {
               backgroundColor: "white",
@@ -98,8 +121,8 @@ const CadastroPf = () => {
           <FilledInput
             id="filled-adornment-password"
             type={showPassword ? "text" : "password"}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={senha}
+            onChange={(e) => [setSenha(e.target.value), setError("")]}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
@@ -125,7 +148,7 @@ const CadastroPf = () => {
           </InputLabel>
           <FilledInput
             id="filled-adornment-password"
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             endAdornment={
@@ -142,17 +165,25 @@ const CadastroPf = () => {
             }
           />
         </FormControl>
+        <Typography>{error}</Typography>
 
         <Button
           variant="contained"
           disableElevation
-          href="/"
+          onClick={() => {
+            const res = cadastro(email, senha);
+            if (res) {
+              setError(res);
+            } else {
+              navigate("/");
+            }
+          }}
           sx={{
             backgroundColor: "#1498E4",
             width: "30ch",
             height: "40px",
             marginBottom: "8px",
-            marginTop:"15px"
+            marginTop: "15px",
           }}
         >
           Finalizar
