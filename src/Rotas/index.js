@@ -18,7 +18,7 @@ const RotasApp = () => {
     <BrowserRouter>
       <Fragment>
         <Routes>
-          <Route path="/Home" element={<Private Item={Home} />} />
+          <Route path="/Home" element={<Home/>} />
           <Route path="/Cadastro" element={<Cadastro />} />
           <Route path="/Recuperarsenha" element={<Recuperarsenha />} />
           <Route path="/CadastroPf" element={<CadastroPf />} />

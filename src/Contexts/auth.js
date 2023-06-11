@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const userToken = localStorage.getItem("user_token");
-    const usersStorage = localStorage.getItem("users_db");
+    const usersStorage = localStorage.getItem("users_bd");
 
     if (userToken && usersStorage) {
       const hasUser = JSON.parse(usersStorage)?.filter(
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
-    const usersStorage = JSON.parse(localStorage.getItem("users_db"));
+    const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
 
     const hasUser = usersStorage?.filter((user) => user.email === email);
 
@@ -59,14 +59,12 @@ export const AuthProvider = ({ children }) => {
     return;
   };
 
-  const sair = () => {
-    setUser(null);
-    localStorage.removeItem("user_token");
-  };
+
 
   return (
-    <AuthContext.Provider 
-    value={{ user, signed: !!user, login, cadastro, sair }}>
+    <AuthContext.Provider
+      value={{ user, signed: !!user, login, cadastro }}
+    >
       {children}
     </AuthContext.Provider>
   );
