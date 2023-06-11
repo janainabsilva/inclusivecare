@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
+
 body{
     
-    background-image: url("../../Assets/bg.png");
+    background-color: white;
     background-size: cover;
     
     
 }
-

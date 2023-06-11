@@ -16,7 +16,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import {useNavigate} from "react-router-dom";
 import useAuth from "../../Hook/useAuth";
-import "../Login/style.css";
 import logo from "../../Assets/logo.png";
 import img from "../../Assets/fundobox.jpg";
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"></link>
@@ -61,7 +60,8 @@ const Login = () => {
  
 
   return (
-    
+     
+      
       <Box
         display="flex"
         flexDirection="column"
@@ -163,6 +163,7 @@ const Login = () => {
           <Button href="/Cadastro" sx={{ color: "white", marginTop: "6px" }}>Crie uma conta</Button>
         </Stack>
       </Box>
+      
     
   );
 };
