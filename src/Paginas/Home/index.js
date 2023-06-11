@@ -1,7 +1,6 @@
 import React from "react";
-import Navbar from "../../Components/Navbar";
-import "../Home/Style.css";
 import { AuthContext } from "../../Contexts/auth";
+import { useContext } from "react";
 
 
 
@@ -15,7 +14,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar/>
+      olá
       
     </div>
   );
