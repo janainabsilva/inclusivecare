@@ -18,8 +18,8 @@ import {useNavigate} from "react-router-dom";
 import useAuth from "../../Hook/useAuth";
 import logo from "../../Assets/logo.png";
 import img from "../../Assets/fundobox.jpg";
+import "../Login/Style.css";
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"></link>
-
 
 
 const Login = () => {
@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
      
-      
+      <div className="Container">
       <Box
         display="flex"
         flexDirection="column"
@@ -163,8 +163,7 @@ const Login = () => {
           <Button href="/Cadastro" sx={{ color: "white", marginTop: "6px" }}>Crie uma conta</Button>
         </Stack>
       </Box>
-      
-    
+      </div>
   );
 };
 

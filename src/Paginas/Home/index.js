@@ -1,11 +1,10 @@
-import React from "react";
-import { AuthContext } from "../../Contexts/auth";
-import { useContext } from "react";
-
+import React, { useContext } from "react";
+import { AuthContext } from "../../Contexts/auth"; 
+import Navbar from "../../Components/Navbar";
+import "./Style.css"
 
 
 const Home = () => {
-
   const { user, login } = useContext(AuthContext);
 
   if (!login) {
@@ -13,9 +12,8 @@ const Home = () => {
   }
 
   return (
-    <div>
-      olá
-      
+    <div  className="white-background">
+      <Navbar/>
     </div>
   );
 };
