@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Contexts/auth"; 
 import Navbar from "../../Components/Navbar";
-import "./Style.css"
-
+import "../Home/home.css";
+import imagem from "../../Assets/home.png";
+import { Box } from '@mui/material';
 
 const Home = () => {
   const { user, login } = useContext(AuthContext);
@@ -12,10 +13,26 @@ const Home = () => {
   }
 
   return (
-    <div  className="white-background">
-      <Navbar/>
-    </div>
+    <div className="home-container"> 
+    <Navbar />
+    <Box
+        display="flex"
+        flexDirection="column"
+        maxWidth={400}
+        height={880}
+        alignItems="center"
+        justifyContent="center"
+        margin="auto"
+        marginTop={5}
+        padding={3}
+        borderRadius="none"
+       
+      >
+      </Box>
+   
+  </div>
   );
 };
 
 export default Home;
+

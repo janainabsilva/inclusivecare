@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Recuperarsenha from "../RecuperarSenha";
+import Recuperarsenha from "../Paginas/RecuperarSenha";
 import Home from "../Paginas/Home";
 import Login from "../Paginas/Login";
 import Cadastro from "../Paginas/Cadastro";

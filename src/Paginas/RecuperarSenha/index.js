@@ -1,8 +1,8 @@
 import React from "react";
 import { Box,Typography, Button,TextField } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import img from "../Assets/fundobox.jpg";
-import logo from "../Assets/logo.png"
+import img from "../../Assets/fundobox.jpg";
+import logo from "../../Assets/logo.png";
 
 const Recuperarsenha = () =>{
     return(

@@ -10,6 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import logo from "../../Assets/logo.png";
 import img from "../../Assets/fundobox.jpg";
+
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"></link>
 
 
