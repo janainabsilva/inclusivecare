@@ -173,7 +173,7 @@ const NavBar = () => {
           </IconButton>
          <img src={logo}  alt=''
          height={80}
-         width={120}
+         width={140}
          sx={{ mr: 4 }}
          
          ></img>
