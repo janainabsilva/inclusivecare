@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Typography, Grid } from '@mui/material';
+import { Box,Button,Typography,Grid} from '@mui/material';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
@@ -14,38 +14,43 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import useAuth from "../../Hook/useAuth";
 import logo from "../../Assets/logo.png";
 import img from "../../Assets/fundobox.jpg";
-import "../Login/login.css";
+import "../Login/login.css"
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"></link>
 
 
+
 const Login = () => {
-  const { login } = useAuth();
+
+  const {login} = useAuth();
   const navigate = useNavigate();
 
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = async () => {
-    if (!email || !password) {
-      setError("Preencha todos os campos");
-      return;
-    }
-
-    const res = await login(email, password);
-
-    if (res) {
-      setError(res);
-      return;
-    }
-
-    navigate("/Home");
+    const handleLogin = async () => {
+      if (!email | !password) {
+        setError("Preencha todos os campos");
+        return;
+      }
+    
+      const res =  login(email, password);
+    
+      if (res ) {
+        setError(res);
+        return;
+      }
+    
+      navigate("/Home");
+    
   };
+
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -53,12 +58,11 @@ const Login = () => {
     event.preventDefault();
   };
 
-  
-
+ 
 
   return (
-    
-    <div className="Container">
+     
+      
       <Box
         display="flex"
         flexDirection="column"
@@ -75,6 +79,8 @@ const Login = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
+        
+        
       >
         <img src={logo} alt="" style={{ width: "140px", height: "120px", marginBottom: "1px" }}></img>
         <Typography variant="h1" gutterBottom fontSize={25} fontFamily={"'Oswald', sans-serif"} textAlign='center' color={"white"}>Faça login na sua conta.</Typography>
@@ -142,7 +148,7 @@ const Login = () => {
         <Button
           variant="contained" disableElevation
           sx={{ backgroundColor: "#05abc4", color: "white", width: '38ch' }}
-          startIcon={<GoogleIcon/>}
+          startIcon={<GoogleIcon />}
         >
           Continue com o Google
         </Button>
@@ -158,9 +164,8 @@ const Login = () => {
           <Button href="/Cadastro" sx={{ color: "white", marginTop: "6px" }}>Crie uma conta</Button>
         </Stack>
       </Box>
-     
+      
     
-      </div>
   );
 };
 
