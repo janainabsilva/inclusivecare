@@ -58,11 +58,10 @@ const Login = () => {
     event.preventDefault();
   };
 
- 
-
+  
   return (
-     
-      
+     <div className="login">
+      <>
       <Box
         display="flex"
         flexDirection="column"
@@ -164,7 +163,8 @@ const Login = () => {
           <Button href="/Cadastro" sx={{ color: "white", marginTop: "6px" }}>Crie uma conta</Button>
         </Stack>
       </Box>
-      
+      </>
+      </div>
     
   );
 };
