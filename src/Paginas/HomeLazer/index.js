@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../../Contexts/auth";
 import Navbar from "../../Components/Navbar";
-import { Box, Typography } from '@mui/material';
+import MediaCard from "../../Components/Card";
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
@@ -11,6 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import DirectionsIcon from '@mui/icons-material/Directions';
+import Pagination from '@mui/material/Pagination';
 import Chip from '@mui/material/Chip';
 import Splide from '@splidejs/splide';
 import { URLHash } from '@splidejs/splide-extension-url-hash';
@@ -20,6 +22,7 @@ import saude from "../../Assets/saude.png";
 import educacao from "../../Assets/educacao.jpg";
 import esporte from "../../Assets/esporte.jpg";
 import caixa from "../../Assets/caixa.jpg";
+
 
 
 
@@ -272,7 +275,57 @@ const HomeLazer = () => {
 
     </Stack>
       </div>
-   
+
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Container maxWidth="false">
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+            </Grid>
+        
+        </Container>
+
+        <Stack spacing={2} style={{ marginTop: "50px" }}>
+
+            <Pagination count={10} color="primary" />
+
+        </Stack>
+
+        </div>
 
       
     </div>

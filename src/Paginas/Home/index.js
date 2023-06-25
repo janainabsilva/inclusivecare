@@ -3,6 +3,7 @@ import { AuthContext } from "../../Contexts/auth";
 import Navbar from "../../Components/Navbar";
 import { Typography } from '@mui/material';
 import Stack from '@mui/material/Stack';
+import MediaCard from "../../Components/Card"
 import Button from '@mui/material/Button';
 import imagem from "../../Assets/home.png";
 import Splide from '@splidejs/splide';
