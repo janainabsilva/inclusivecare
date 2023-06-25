@@ -21,6 +21,7 @@ const contentStyle = {
   maxWidth:"100%",
   textAlign: 'center',
   background: '#364d79',
+  borderRadius:"50px"
 };
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
         </Typography>
         </div>
 
-        <Carousel afterChange={onChange} style={{ margin: "0 auto", maxWidth:"80%",marginTop:"60px" }}>
+        <Carousel afterChange={onChange} style={{ margin: "0 auto", maxWidth:"80%",marginTop:"60px",borderRadius:"50px" }}>
       <div>
         <img src={saude} alt="" style={contentStyle}  ></img>
         <Typography

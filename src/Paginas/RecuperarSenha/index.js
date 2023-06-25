@@ -3,11 +3,12 @@ import { Box,Typography, Button,TextField } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import img from "../../Assets/fundobox.jpg";
 import logo from "../../Assets/logo.png";
+import "../RecuperarSenha/style.css"
 
 const Recuperarsenha = () =>{
     return(
+        <div className="recuperarsenha"> 
         <>
-    
         <Box
           display="flex" 
           flexDirection="column" 
@@ -16,7 +17,6 @@ const Recuperarsenha = () =>{
           alignItems="center"
           justifyContent="center"
           margin="auto" 
-          marginTop={5}
           padding={3} 
           borderRadius="none" 
           sx={{
@@ -67,6 +67,7 @@ const Recuperarsenha = () =>{
     
        
         </>
+        </div>
         
     )
 }

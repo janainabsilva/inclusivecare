@@ -10,6 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import logo from "../../Assets/logo.png";
 import img from "../../Assets/fundobox.jpg";
+import "../Cadastro/style.css"
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"></link>
 
@@ -53,7 +54,8 @@ const Cadastro = () => {
   };
 
   return (
-    <>
+   <div className="cadastro">
+   <>
       <Box
         display="flex"
         flexDirection="column"
@@ -62,7 +64,6 @@ const Cadastro = () => {
         alignItems="center"
         justifyContent="center"
         margin="auto"
-        marginTop={5}
         padding={3}
         borderRadius="none"
         sx={{
@@ -122,6 +123,7 @@ const Cadastro = () => {
         </Button>
       </Box>
     </>
+    </div>
   );
 };
 

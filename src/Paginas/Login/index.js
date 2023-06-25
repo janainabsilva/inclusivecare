@@ -70,7 +70,6 @@ const Login = () => {
         alignItems="center"
         justifyContent="center"
         margin="auto"
-        marginTop={5}
         padding={3}
         borderRadius="none"
         sx={{

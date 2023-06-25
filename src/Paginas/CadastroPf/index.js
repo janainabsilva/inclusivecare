@@ -12,6 +12,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import useAuth from "../../Hook/useAuth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import "../CadastroPf/style.css";
 
 <link
   href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"
@@ -45,7 +46,8 @@ const CadastroPf = () => {
   };
 
   return (
-    <>
+   <div className="cadastropf">
+   <>
       <Box
         display="flex"
         flexDirection="column"
@@ -54,7 +56,6 @@ const CadastroPf = () => {
         alignItems="center"
         justifyContent="center"
         margin="auto"
-        marginTop={5}
         padding={3}
         borderRadius="none"
         sx={{
@@ -190,6 +191,7 @@ const CadastroPf = () => {
         </Button>
       </Box>
     </>
+    </div>
   );
 };
 
