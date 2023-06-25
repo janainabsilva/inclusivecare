@@ -43,7 +43,6 @@ const Cadastro = () => {
        
         window.location.href = "/CadastroPf";
       } else {
-        // Redirecionar para outra página se o primeiro item não for selecionado
         window.location.href = "";
       }
     }
