@@ -36,12 +36,10 @@ const CadastroPj = () => {
           if (selectedOption === names[0]) {
            
             window.location.href = "/CadastroPj2";
-          } else if (selectedOption.includes(names[0])){
-            window.location.href = "/CadastroPj2";
           } else if (selectedOption.includes(names[1])){
             window.location.href = "/CadastroPj2";
-          }
-              else if (selectedOption.includes(names[2])){
+          } 
+            else if (selectedOption.includes(names[2])){
               window.location.href = "/CadastroPj2";
             } else if (selectedOption.includes(names[3])){
               window.location.href = "/CadastroPj2";
@@ -125,7 +123,7 @@ const CadastroPj = () => {
                 input={<OutlinedInput label="Tag" />}
                 renderValue={(selected) =>
                   selected.join(", ")
-                }
+                } // Exibe todas as opções selecionadas separadas por vírgula
                 MenuProps={MenuProps}
                 sx={{ backgroundColor: "white" }}
               >
