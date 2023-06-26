@@ -19,7 +19,7 @@ import "../CadastroPf/style.css";
   rel="stylesheet"
 ></link>;
 
-const CadastroPf = () => {
+const CadastroPj3 = () => {
   const { cadastro } = useAuth(""); 
   const navigate = useNavigate("");
   const [email, setEmail] = useState("");
@@ -70,32 +70,26 @@ const CadastroPf = () => {
           style={{
             width: "140px",
             height: "80px",
-            marginBottom: "1px",
-            paddingTop: "10px",
+            
+            paddingTop: "2px",
           }}
         ></img>
-        <Typography
-          variant="h1"
-          gutterBottom
-          fontSize={25}
-          fontFamily={"'Oswald', sans-serif"}
-          textAlign="center"
-          color={"white"}
-        >
-          Bem-vindo(a)! <br />
-          Crie sua conta no Inclusive Care
-        </Typography>
-        <Typography
-          variant="h3"
-          gutterBottom
-          fontSize={15}
-          fontFamily={"'Oswald', sans-serif"}
-          textAlign="center"
-          color={"white"}
-          padding={1}
-        >
-          Você está procurando serviços inclusivos para autismo. Preencha os campos abaixo e encontre-os conosco durante o seu registro.
-        </Typography>
+        
+       
+        <TextField
+          id="filled-basic"
+          label="Nome"
+          variant="filled"
+          margin="normal"
+          type=""
+          InputProps={{
+            style: {
+              backgroundColor: "white",
+              width: "35ch",
+              height:"6ch"
+            },
+          }}
+        />
         <TextField
           id="filled-basic"
           label="Email"
@@ -104,6 +98,32 @@ const CadastroPf = () => {
           type="email"
           value={email}
           onChange={(e) => [setEmail(e.target.value), setError("")]}
+          InputProps={{
+            style: {
+              backgroundColor: "white",
+              width: "35ch",
+            },
+          }}
+        />
+         <TextField
+          id="filled-basic"
+          label="Telefone"
+          variant="filled"
+          margin="normal"
+          type="number"
+          InputProps={{
+            style: {
+              backgroundColor: "white",
+              width: "35ch",
+            },
+          }}
+        />
+          <TextField
+          id="filled-basic"
+          label="Cep"
+          variant="filled"
+          margin="normal"
+          type="number"
           InputProps={{
             style: {
               backgroundColor: "white",
@@ -184,7 +204,7 @@ const CadastroPf = () => {
             width: "30ch",
             height: "40px",
             marginBottom: "8px",
-            marginTop: "15px",
+            marginTop: "10px",
           }}
         >
           Finalizar
@@ -195,4 +215,4 @@ const CadastroPf = () => {
   );
 };
 
-export default CadastroPf;
+export default CadastroPj3;
