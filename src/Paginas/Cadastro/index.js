@@ -43,10 +43,12 @@ const Cadastro = () => {
        
         window.location.href = "/CadastroPf";
       } else {
-        window.location.href = "";
+        window.location.href = "/CadastroPj";
       }
     }
-  };
+   
+  }
+  
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);

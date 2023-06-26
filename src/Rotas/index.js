@@ -6,7 +6,13 @@ import Login from "../Paginas/Login";
 import Cadastro from "../Paginas/Cadastro";
 import useAuth from "../Hook/useAuth";
 import CadastroPf from "../Paginas/CadastroPf/index";
-import HomeLazer from "../Paginas/HomeLazer"
+import HomeLazer from "../Paginas/HomeLazer";
+import HomeSaude from "../Paginas/HomeSaude/index";
+import HomeEducacao from "../Paginas/HomeEducacao";
+import HomeEsporte from "../Paginas/HomeEsporte";
+import CadastroPj from "../Paginas/CadastroPJ";
+
+
 
 const Private = ({ Item }) => {
   const { cadastrado } = useAuth();
@@ -23,8 +29,12 @@ const RotasApp = () => {
           <Route path="/Cadastro" element={<Cadastro />} />
           <Route path="/Recuperarsenha" element={<Recuperarsenha />} />
           <Route path="/CadastroPf" element={<CadastroPf />} />
+          <Route path="/CadastroPj" element={<CadastroPj />} />
           <Route path="/" element={<Login />} />
           <Route path="/HomeLazer" element={<HomeLazer/>}/>
+          <Route path="/HomeSaude" element={<HomeSaude/>}/>
+          <Route path="/HomeEducacao" element={<HomeEducacao/>}/>
+          <Route path="/HomeEsporte" element={<HomeEsporte/>}/>
         </Routes>
       </Fragment>
     </BrowserRouter>

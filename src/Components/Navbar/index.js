@@ -171,12 +171,14 @@ const NavBar = () => {
           >
            
           </IconButton>
+          <a href='/Home'>
          <img src={logo}  alt=''
          height={80}
          width={140}
          sx={{ mr: 4 }}
          
          ></img>
+         </a>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

@@ -145,7 +145,9 @@ const HomeLazer = () => {
               </Typography>
               </div>
           <Stack spacing={2} direction="row" style={{ position: 'absolute', top: '60%', marginLeft:"190px" , transform: 'translate(-70%, -10%)' }}>
+            <a href="/HomeSaude">
             <Button variant="contained" sx={{ background:"rgba(255, 255, 255, 0.25)", backdropFilter:"blur(12.5px)",borderRadius:"20px" }}>Saiba Mais</Button>
+            </a>
           </Stack>
             </li>
             <li className="splide__slide" data-splide-hash="slide03"  >
@@ -165,7 +167,9 @@ const HomeLazer = () => {
               </Typography>
               </div>
           <Stack spacing={2} direction="row" style={{ position: 'absolute', top: '60%', marginLeft:"220px" , transform: 'translate(-70%, -10%)' }}>
+              <a href="/HomeSaude">
             <Button variant="contained" sx={{ background:"rgba(255, 255, 255, 0.25)", backdropFilter:"blur(12.5px)",borderRadius:"20px" }}>Saiba Mais</Button>
+            </a>
           </Stack>
             </li>
             <li className="splide__slide" data-splide-hash="slide03"  >
@@ -185,7 +189,9 @@ const HomeLazer = () => {
               </Typography>
               </div>
           <Stack spacing={2} direction="row" style={{ position: 'absolute', top: '60%', marginLeft:"220px" , transform: 'translate(-70%, -10%)' }}>
+              <a href="/HomeEsporte">
             <Button variant="contained" sx={{ background:"rgba(255, 255, 255, 0.25)", backdropFilter:"blur(12.5px)",borderRadius:"20px" }}>Saiba Mais</Button>
+              </a>
           </Stack>
             </li>
           </ul>
