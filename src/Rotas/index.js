@@ -10,7 +10,7 @@ import HomeLazer from "../Paginas/HomeLazer";
 import HomeSaude from "../Paginas/HomeSaude/index";
 import HomeEducacao from "../Paginas/HomeEducacao";
 import HomeEsporte from "../Paginas/HomeEsporte";
-import CadastroPj from "../Paginas/CadastroPj";
+import CadastroPj from "../Paginas/CadastroPJ";
 import CadastroPj2 from "../Paginas/CadastroPj2";
 import CadastroPj3 from "../Paginas/CadastroPj3";
 

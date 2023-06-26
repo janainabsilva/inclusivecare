@@ -26,27 +26,26 @@ const MenuProps = {
 const names = ["Saúde", "Educação", "Lazer", "Esporte"];
 
 const CadastroPj = () => {
-    const [selectedOption, setSelectedOptions] = useState([]);
-    const [error, setError] = useState("");
-  
-    const handleNext = () => {
-      if (selectedOption === '') {
-          setError('Selecione uma opção');
-        } else {
-          if (selectedOption === names[0]) {
-           
+  const [selectedOption, setSelectedOptions] = useState([]);
+  const [error, setError] = useState("");
+
+  const handleNext = () => {
+    if (selectedOption === '') {
+        setError('Selecione uma opção');
+      } else {
+        if (selectedOption === names[0]) {
+         
+          window.location.href = "/CadastroPj2";
+        } else if (selectedOption.includes(names[1])){
+          window.location.href = "/CadastroPj2";
+        } else if (selectedOption.includes(names[2])){
             window.location.href = "/CadastroPj2";
-          } else if (selectedOption.includes(names[1])){
+          } else if (selectedOption.includes(names[3])){
             window.location.href = "/CadastroPj2";
           } 
-            else if (selectedOption.includes(names[2])){
-              window.location.href = "/CadastroPj2";
-            } else if (selectedOption.includes(names[3])){
-              window.location.href = "/CadastroPj2";
-            } 
-        }
-    };
-  
+      }
+  };
+
   const handleChange = (event) => {
     setSelectedOptions(event.target.value);
   };
@@ -158,7 +157,7 @@ const CadastroPj = () => {
           <Button
             variant="contained"
             disableElevation
-            href="/Cadastro"
+            href="/CadastroPj2"
             sx={{
               backgroundColor: "#4386AC",
               color: "white",
