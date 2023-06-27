@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      <img src={imagem} alt="" style={{ maxWidth: "100%", width: "100%", height: "auto" }} />
+      <img src={imagem} alt="" style={{ maxWidth: "100%",  width:"1490px" }} />
       <div style={{ marginTop: "40px", marginLeft: "40px", padding:"30px" }}>
         <Typography
           variant="h1"
@@ -80,8 +80,8 @@ const Home = () => {
         </Typography>
       </div>
 
-      <div className="splide" ref={splideRef} style={{ display: "flex", justifyContent: "center" }} >
-        <div className="splide__track" >
+      <div className="splide" ref={splideRef}>
+        <div className="splide__track">
           <ul className="splide__list">
            
             <li className="splide__slide" data-splide-hash="slide02"  >
@@ -188,7 +188,7 @@ const Home = () => {
         </Typography>
       
       </div>
-      <img src={mapa} alt="" style={{height: "auto", maxWidth: "100%", width: "100%"}}></img>
+      <img src={mapa} alt="" style={{height: "470px", Width:"1349px", maxwidth: "100%", maxHeight:"100%"}}></img>
     </div>
   );
 };
