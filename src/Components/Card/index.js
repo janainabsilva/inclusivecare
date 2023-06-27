@@ -5,12 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import teatro from "../../Assets/teatro.jpg";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import upload from "../../Assets/upload.jpeg";
 
 export default function MediaCard() {
   return (
-    <Card sx={{ maxWidth: 345,background:"#E8E8E8" }}>
-        <img src={teatro} alt='' sx={{height:"20px"}} ></img>
+    <Card sx={{ maxWidth: 345,background:"#F7F7F7" }}>
+        <img src={upload} alt='' style={{height:"100%", width:"100%"}} ></img>
       <CardMedia
         
         
@@ -18,10 +20,14 @@ export default function MediaCard() {
       <CardContent  sx={{ height: "100px" }} >
         
         <Typography gutterBottom variant="h5" component="div">
-          Teatro
+          
         </Typography>
         <Typography variant="body2" color="text.secondary">
-         Recife- PE
+         <LocationOnIcon/>
+         <br/>
+         <br/>
+         <AccessTimeIcon/>
+
         </Typography>
       </CardContent>
      

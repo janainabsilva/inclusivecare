@@ -259,29 +259,73 @@ const HomeEducacao = () => {
         </Typography>
         <Stack direction="row" spacing={1} style={{top:"10px"}}>
       <Chip
-        label="Psicólogos(a)"
+        label="Escolas"
         variant="outlined"
         onClick={handleClick}
         onDelete={handleDelete}
        
       />
       <Chip
-        label="Clínicas "
+        label="Psicopedagogas"
         variant="outlined"
         onClick={handleClick}
         onDelete={handleDelete}
       />
-      <Chip
-        label="Fonoaudiólogos(a)"
-        variant="outlined"
-        onClick={handleClick}
-        onDelete={handleDelete}
-      />
-     
-
+      
     </Stack>
       </div>
 
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Container maxWidth="false">
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+            </Grid>
+        
+        </Container>
+
+        <Stack spacing={2} style={{ marginTop: "50px" }}>
+
+            <Pagination count={10} color="primary" />
+            <br/>
+            <br/>
+        </Stack>
+
+        </div>
       
         
         

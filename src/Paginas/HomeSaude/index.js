@@ -280,6 +280,57 @@ const HomeSaude = () => {
     </Stack>
       </div>
 
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Container maxWidth="false">
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+            </Grid>
+        
+        </Container>
+
+        <Stack spacing={2} style={{ marginTop: "50px" }}>
+
+            <Pagination count={10} color="primary" />
+            <br/>
+            <br/>
+        </Stack>
+
+        </div>
       
         
         

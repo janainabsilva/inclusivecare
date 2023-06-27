@@ -124,7 +124,9 @@ const HomeEsporte = () => {
               </Typography>
               </div>
           <Stack spacing={2} direction="row"  style={{ position: 'absolute', top: '60%', marginLeft:"190px" , transform: 'translate(-70%, -10%)',maxWidth:"100%", maxWidth:"100%", maxHeight:"100%" }}>
+              <a href="/HomeLazer">
             <Button variant="contained" sx={{ background:"rgba(255, 255, 255, 0.25)", backdropFilter:"blur(12.5px)",borderRadius:"20px" }}>Saiba Mais</Button>
+            </a>
           </Stack>
         
             </li>
@@ -145,7 +147,9 @@ const HomeEsporte = () => {
               </Typography>
               </div>
           <Stack spacing={2} direction="row" style={{ position: 'absolute', top: '60%', marginLeft:"190px" , transform: 'translate(-70%, -10%)' }}>
+              <a href="HomeSaude">
             <Button variant="contained" sx={{ background:"rgba(255, 255, 255, 0.25)", backdropFilter:"blur(12.5px)",borderRadius:"20px" }}>Saiba Mais</Button>
+            </a>
           </Stack>
             </li>
             <li className="splide__slide" data-splide-hash="slide03"  >
@@ -165,7 +169,9 @@ const HomeEsporte = () => {
               </Typography>
               </div>
           <Stack spacing={2} direction="row" style={{ position: 'absolute', top: '60%', marginLeft:"220px" , transform: 'translate(-70%, -10%)' }}>
+            <a href="/HomeEducacao">
             <Button variant="contained" sx={{ background:"rgba(255, 255, 255, 0.25)", backdropFilter:"blur(12.5px)",borderRadius:"20px" }}>Saiba Mais</Button>
+            </a>
           </Stack>
             </li>
             <li className="splide__slide" data-splide-hash="slide03"  >
@@ -255,20 +261,20 @@ const HomeEsporte = () => {
         </Typography>
         <Stack direction="row" spacing={1} style={{top:"10px"}}>
       <Chip
-        label="Psicólogos(a)"
+        label="Natação"
         variant="outlined"
         onClick={handleClick}
         onDelete={handleDelete}
        
       />
       <Chip
-        label="Clínicas "
+        label="Futsal"
         variant="outlined"
         onClick={handleClick}
         onDelete={handleDelete}
       />
       <Chip
-        label="Fonoaudiólogos(a)"
+        label="Vôlei"
         variant="outlined"
         onClick={handleClick}
         onDelete={handleDelete}
@@ -277,6 +283,57 @@ const HomeEsporte = () => {
 
     </Stack>
       </div>
+         
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Container maxWidth="false">
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+                <Grid item xs={12} md={2}>
+                    <MediaCard/>
+                </Grid>
+            </Grid>
+        
+        </Container>
+
+        <Stack spacing={2} style={{ marginTop: "50px" }}>
+
+            <Pagination count={10} color="primary" />
+
+        </Stack>
+
+        </div>
 
       
         
