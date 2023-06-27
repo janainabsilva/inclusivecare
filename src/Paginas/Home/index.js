@@ -188,7 +188,7 @@ const Home = () => {
         </Typography>
       
       </div>
-      <img src={mapa} alt="" style={{height: "470px", Width:"1349px", maxwidth: "100%", maxHeight:"100%"}}></img>
+      <img src={mapa} alt="" style={{height: "470px", width:"1349px", maxwidth: "100%", maxHeight:"100%"}}></img>
     </div>
   );
 };
